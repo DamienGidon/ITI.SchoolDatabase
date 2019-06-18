@@ -1,4 +1,5 @@
-﻿USE [itiSchoolDB]
+﻿-- DO NOT TOUCH
+USE [itiSchoolDB]
 INSERT INTO Student (Guid, Name,Semestre,Orientation,BirthDate, MainTeacher )
  VALUES
  (NEWID(), 'Thibault Cam',10,'IL', '1994-02-21', (select guid from Teacher where name = 'Olivier Spinelli')),

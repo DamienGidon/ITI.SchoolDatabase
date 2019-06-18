@@ -1,4 +1,5 @@
-﻿USE [itiSchoolDB]
+﻿-- DO NOT TOUCH
+USE [itiSchoolDB]
 INSERT INTO Classroom (Guid, Name, Capacity, Projector, Teacher)
  VALUES
  (NEWID(), 'E07',30,1,(select guid from Teacher where name = 'Olivier Spinelli')),

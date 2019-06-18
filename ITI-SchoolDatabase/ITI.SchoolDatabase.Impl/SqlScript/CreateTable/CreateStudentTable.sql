@@ -1,2 +1,2 @@
-﻿-- Créer la table Student
+﻿-- Create Student script
 

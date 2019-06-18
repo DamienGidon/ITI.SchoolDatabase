@@ -5,7 +5,7 @@
 
 
 -- Return classroom where you can find Student whose name starts with "Thibau" when they are with their MainTeacher
-
+GO
 
 
 

@@ -1,1 +1,1 @@
-﻿--Créer la table Teacher
+﻿-- Create Teacher script

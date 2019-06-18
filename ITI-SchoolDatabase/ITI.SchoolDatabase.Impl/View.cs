@@ -14,14 +14,14 @@ namespace ITI.SchoolDatabase.Impl
 
 		}
 
-		public string StudentName { get; }
+        public string StudentName => throw new NotImplementedException();
 
-		public int Semestre { get; }
+        public int Semestre => throw new NotImplementedException();
 
-		public string Orientation { get; }
+        public string Orientation => throw new NotImplementedException();
 
-		public string TeacherName { get; }
+        public string TeacherName => throw new NotImplementedException();
 
-		public string RoomName { get; }
-	}
+        public string RoomName => throw new NotImplementedException();
+    }
 }
