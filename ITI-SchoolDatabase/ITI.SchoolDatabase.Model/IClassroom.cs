@@ -16,9 +16,5 @@ namespace ITI.SchoolDatabase.Model
 
         bool Projector { get; }
 
-        ITeacher Teacher { get; set; }
-
-        ITeacher AddTeacher(IClassroom teacher);
-
     }
 }

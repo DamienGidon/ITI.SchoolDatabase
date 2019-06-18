@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,14 +15,11 @@ namespace ITI.SchoolDatabase.Model
 
         DateTime Birth { get; }
 
-        string Course { get; set; }
+        string Course { get;}
 
-        string Orentation { get; set; }
+        string Orentation { get; }
 
-        bool IsInternal { get; set;  }
+        bool IsInternal { get;}
 
-        IClassroom Classroom { get; set; }
-
-        IClassroom AddClassroom(IClassroom classroom);
     }
 }

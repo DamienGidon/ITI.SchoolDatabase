@@ -14,9 +14,7 @@
     <None Remove="SqlScript\Insert\InsertTeachers.sql" />
     <None Remove="SqlScript\ModificationScheme\StudentMod.sql" />
     <None Remove="SqlScript\ModificationScheme\TeacherMod.sql" />
-    <None Remove="SqlScript\Requests\ClassroomRequest.sql" />
-    <None Remove="SqlScript\Requests\StudentRequest.sql" />
-    <None Remove="SqlScript\Requests\TeacherRequest.sql" />
+    <None Remove="SqlScript\Requests\Requests.sql" />
     <None Remove="SqlScript\StoredProcedures\FindStudent.sql" />
     <None Remove="SqlScript\StoredProcedures\UpStudent.sql" />
     <None Remove="SqlScript\Views\View.sql" />
@@ -52,13 +50,7 @@
     <EmbeddedResource Include="SqlScript\ModificationScheme\TeacherMod.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="SqlScript\Requests\ClassroomRequest.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SqlScript\Requests\TeacherRequest.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SqlScript\Requests\StudentRequest.sql">
+    <EmbeddedResource Include="SqlScript\Requests\Requests.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="SqlScript\StoredProcedures\UpStudent.sql">
