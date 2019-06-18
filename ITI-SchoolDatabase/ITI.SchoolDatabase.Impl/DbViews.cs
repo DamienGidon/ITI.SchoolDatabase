@@ -11,6 +11,10 @@ namespace ITI.SchoolDatabase.Impl
 {
     public static class DbViews
     {
+        /// <summary>
+        /// Call View.sql
+        /// </summary>
+        /// <returns></returns>
         public static string Views()
         {
 			throw new NotImplementedException();
@@ -21,7 +25,7 @@ namespace ITI.SchoolDatabase.Impl
         /// </summary>
         /// <param name="connection">Sql connection</param>
         /// <returns>View result</returns>
-		public static IEnumerable<IView> GetViewValues(SqlConnection connection)
+		public static IEnumerable<View> GetViewValues(SqlConnection connection)
         {
 			throw new NotImplementedException();
 		}

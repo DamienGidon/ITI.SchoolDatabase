@@ -1,1 +1,1 @@
-﻿-- Créer les colonnes Firstname, Lastname dans la table Teacher et les remplir uniquement pour les profs nés après 1975
+﻿-- Create the Firstname, Lastname columns in the Teacher table and fill them only for teachers born after 1975

@@ -15,8 +15,8 @@ namespace ITI.SchoolDatabase.Tests
     public class T5Views
     {
         /// <summary>
-        /// Vue qui doit renvoyer la liste de tous les élèves en affichant Le nom de l'élève en tant que 'StudentName', le semestre, l'orientation, le nom de son Prof principal en tant que 'TeacherName'
-        /// Ainsi que la salle en tant que 'RoomName'
+        /// View that should return the list of all students by displaying : 
+        /// Student's name as 'StudentName', Semester, Orientation, Teacher's main name as 'TeacherName', and the room as that 'RoomName'
         /// </summary>
         [Test]
         public void T1_Create_StudentsView()

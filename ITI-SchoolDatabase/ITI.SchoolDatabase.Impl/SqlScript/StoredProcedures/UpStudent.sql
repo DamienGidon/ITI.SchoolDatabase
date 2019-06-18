@@ -1,4 +1,4 @@
-﻿-- Creer une proc qui prend une liste en param et qui va incrementer le semestre de tous les élèves qui ne sont pas dans cette liste. Elle retournera les élèves qui on dépassé le S10 avant de les delete
+﻿-- Create a proc that takes a param list and increments the semester of all students who are not in this list. It will return students who have passed the S10 before deleting them
 
 
 

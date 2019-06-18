@@ -1,1 +1,1 @@
-﻿-- Créer les colonnes Firstname, Lastname dans la table Student et la remplir en prenant nom prénom de la colonne Name
+﻿-- Create the Firstname, Lastname columns in the Student table and fill it in by taking name of the Name column
