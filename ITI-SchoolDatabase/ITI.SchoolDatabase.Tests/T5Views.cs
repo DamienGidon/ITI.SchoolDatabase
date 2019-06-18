@@ -47,16 +47,16 @@ namespace ITI.SchoolDatabase.Tests
 
                 ResetTable(connection);
 
-                List<IView> results = DbViews.GetViewValues(connection).ToList();
+                List<View> results = DbViews.GetViewValues(connection).ToList();
 
                 Compare(results, GetAllUser()).Should().BeTrue();
             }
         }
 
         #region private Methode
-        List<IView> GetAllUser()
+        List<View> GetAllUser()
         {
-            List<IView> users = new List<IView>();
+            List<View> users = new List<View>();
 
             users.Add(item: new View("Pierre Viara", 6, "IL", "Antoine Raquillet", "E01"));
             users.Add(new View("Rodolf Vechter", 6, "SR", "Erico Lalita", ""));
@@ -94,9 +94,9 @@ namespace ITI.SchoolDatabase.Tests
 
         }
 
-        private bool Compare(List<IView> one, List<IView> two)
+        private bool Compare(List<View> one, List<View> two)
         {
-            foreach(IView v in one)
+            foreach(View v in one)
             {
                 var tmp = two.FirstOrDefault(x => x.StudentName == v.StudentName);
                 if (tmp == null)
