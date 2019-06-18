@@ -14,16 +14,12 @@ namespace ITI.SchoolDatabase.Tests
     [TestFixture]
     public class T4Requests
     {
-        string[] StudentScripts;
-        string[] TeacherScripts;
-        string[] ClassroomScripts;
+        string[] RequestsScripts;
 
         [SetUp]
         public void Setup()
         {
-            StudentScripts = File.ReadAllText(DbRequest.StudentRequests()).Split(new string[] { "GO\r\n", "GO ", "GO\t" }, StringSplitOptions.RemoveEmptyEntries);
-            TeacherScripts = File.ReadAllText(DbRequest.TeacherRequests()).Split(new string[] { "GO\r\n", "GO ", "GO\t" }, StringSplitOptions.RemoveEmptyEntries);
-            ClassroomScripts = File.ReadAllText(DbRequest.ClassroomRequests()).Split(new string[] { "GO\r\n", "GO ", "GO\t" }, StringSplitOptions.RemoveEmptyEntries);
+            RequestsScripts = File.ReadAllText(DbRequest.Requests()).Split(new string[] { "GO\r\n", "GO ", "GO\t" }, StringSplitOptions.RemoveEmptyEntries);
         }
 
         [Test]
@@ -36,7 +32,7 @@ namespace ITI.SchoolDatabase.Tests
 
                 ScriptExecutor exe = new ScriptExecutor();
 
-                List<string> response = exe.ScriptReader(StudentScripts[0], connection, "Name").ToList();
+                List<string> response = exe.ScriptReader(RequestsScripts[0], connection, "Name").ToList();
 
                 Assert.AreEqual(response.Count, 3);
                 Assert.Contains("Damien Gidon", response);
@@ -54,7 +50,7 @@ namespace ITI.SchoolDatabase.Tests
 
                 ScriptExecutor exe = new ScriptExecutor();
 
-                List<string> response = exe.ScriptReader(ClassroomScripts[1], connection, "Name").ToList();
+                List<string> response = exe.ScriptReader(RequestsScripts[1], connection, "Name").ToList();
 
                 Assert.AreEqual(response.Count, 2);
                 Assert.Contains("E07", response);
@@ -71,7 +67,7 @@ namespace ITI.SchoolDatabase.Tests
 
                 ScriptExecutor exe = new ScriptExecutor();
 
-                List<string> response = exe.ScriptReader(TeacherScripts[0], connection, "Course").ToList();
+                List<string> response = exe.ScriptReader(RequestsScripts[2], connection, "Course").ToList();
 
                 Assert.AreEqual(response.Count, 5);
                 Assert.Contains("Programmation", response);
@@ -91,7 +87,7 @@ namespace ITI.SchoolDatabase.Tests
 
                 ScriptExecutor exe = new ScriptExecutor();
 
-                List<string> response = exe.ScriptReader(ClassroomScripts[0], connection, "Name").ToList();
+                List<string> response = exe.ScriptReader(RequestsScripts[3], connection, "Name").ToList();
 
                 response.Count().Should().Be(3);
                 Assert.AreEqual("E01", response[0]);

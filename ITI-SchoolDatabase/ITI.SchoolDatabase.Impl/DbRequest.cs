@@ -9,19 +9,9 @@ namespace ITI.SchoolDatabase.Impl
 {
     public static class DbRequest
     {
-        public static string StudentRequests()
+        public static string Requests()
         {
-			throw new NotImplementedException();
-		}
-
-		public static string TeacherRequests()
-        {
-			throw new NotImplementedException();
-		}
-
-		public static string ClassroomRequests()
-        {
-			throw new NotImplementedException();
-		}
-	}
+            throw new NotImplementedException();
+        }
+    }
 }
