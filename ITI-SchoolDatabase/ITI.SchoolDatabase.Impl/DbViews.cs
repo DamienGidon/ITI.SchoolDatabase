@@ -16,6 +16,11 @@ namespace ITI.SchoolDatabase.Impl
 			throw new NotImplementedException();
 		}
 
+        /// <summary>
+        /// Call View
+        /// </summary>
+        /// <param name="connection">Sql connection</param>
+        /// <returns>View result</returns>
 		public static IEnumerable<IView> GetViewValues(SqlConnection connection)
         {
 			throw new NotImplementedException();

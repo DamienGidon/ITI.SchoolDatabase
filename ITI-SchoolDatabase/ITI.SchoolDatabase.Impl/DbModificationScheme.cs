@@ -9,16 +9,20 @@ namespace ITI.SchoolDatabase.Impl
 {
     public static class DbModificationScheme
     {
-		//Call script sql StudentMod 
-
+        /// <summary>
+        /// Call script sql StudentMod
+        /// </summary>
+        /// <returns></returns>
 		public static string UpdateTableStudent()
         {
 			throw new NotImplementedException();
 		}
-
-		//Call script sql TeacherMod 
-
-		public static string UpdateTableTeacher()
+        
+        /// <summary>
+        /// Call script sql TeacherMod 
+        /// </summary>
+        /// <returns></returns>
+        public static string UpdateTableTeacher()
         {
 			throw new NotImplementedException();
 		}

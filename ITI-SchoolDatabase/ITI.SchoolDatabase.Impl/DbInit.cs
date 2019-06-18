@@ -29,7 +29,6 @@ namespace ITI.SchoolDatabase.Impl
 
 		}
 
-		//Call script sql Create Teacher Table
 		public static string CreateTableTeacher()
         {
 			throw new NotImplementedException();

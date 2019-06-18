@@ -11,11 +11,7 @@ namespace ITI.SchoolDatabase.Impl
 	{
 		public View(string studentName, int semestre, string orientation, string teacherName, string roomName)
 		{
-			StudentName = studentName;
-			Semestre = semestre;
-			Orientation = orientation;
-			TeacherName = teacherName;
-			RoomName = roomName;
+
 		}
 
 		public string StudentName { get; }

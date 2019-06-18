@@ -16,20 +16,29 @@ namespace ITI.SchoolDatabase.Impl
 
 		}
 
-		//Call script sql Insert Teacher Table
-		public static string InsertTeacherTable()
+        /// <summary>
+        /// Call script sql Insert Teacher Table
+        /// </summary>
+        /// <returns></returns>
+        public static string InsertTeacherTable()
         {
 			throw new NotImplementedException();
 		}
 
-		//Call script sql Insert Student Table
-		public static string InsertStudentTable()
+        /// <summary>
+        /// Call script sql Insert Student Table 
+        /// </summary>
+        /// <returns></returns>
+        public static string InsertStudentTable()
         {
 			throw new NotImplementedException();
 		}
 
-		//Call script sql Insert Classroom Table
-		public static string InsertClassroomTable()
+        /// <summary>
+        /// Call script sql Insert Classroom Table
+        /// </summary>
+        /// <returns></returns>
+        public static string InsertClassroomTable()
         {
 			throw new NotImplementedException();
 		}

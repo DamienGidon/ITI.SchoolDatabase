@@ -21,12 +21,24 @@ namespace ITI.SchoolDatabase.Impl
 			throw new NotImplementedException();
 		}
 
+        /// <summary>
+        /// Call FindStudent Proc
+        /// </summary>
+        /// <param name="param">Param to find students</param>
+        /// <param name="connection">Sql Connection</param>
+        /// <returns>All students nanme matching the param</returns>
 		public static IEnumerable<string> FindStudent(string param, SqlConnection connection)
         {
 			throw new NotImplementedException();
 
 		}
 
+        /// <summary>
+        /// Call UpStudent Proc
+        /// </summary>
+        /// <param name="param"> List of Students who do not change semester </param>
+        /// <param name="connection">Sql Connection</param>
+        /// <returns>IEnumerable of students leaving school</returns>
 		public static IEnumerable<string> UpStudent(string[] param, SqlConnection connection)
         {
 			throw new NotImplementedException();
