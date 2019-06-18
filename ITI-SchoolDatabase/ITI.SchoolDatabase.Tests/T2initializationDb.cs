@@ -75,6 +75,10 @@ namespace ITI.SchoolDatabase.Tests
 
                 ScriptExecutor exe = new ScriptExecutor();
 
+                int c = (int)new SqlCommand(@"use itiSchoolDB SELECT count(*) as IsExists FROM dbo.sysobjects where id = object_id('Classroom')", connection).ExecuteScalar();
+                if (c > 0) new SqlCommand("DROP TABLE Classroom", connection).ExecuteScalar();
+                int s = (int)new SqlCommand(@"use itiSchoolDB SELECT count(*) as IsExists FROM dbo.sysobjects where id = object_id('Student')", connection).ExecuteScalar();
+                if (s > 0) new SqlCommand("DROP TABLE Student", connection).ExecuteScalar();
                 int t = (int) new SqlCommand(@"use itiSchoolDB SELECT count(*) as IsExists FROM dbo.sysobjects where id = object_id('Teacher')", connection).ExecuteScalar();
                 if (t > 0) new SqlCommand("DROP TABLE Teacher", connection).ExecuteScalar();
 
@@ -183,6 +187,8 @@ namespace ITI.SchoolDatabase.Tests
             {
                 connection.Open();
 
+                ResetTables(connection);
+
                 ScriptExecutor exe = new ScriptExecutor();
                 exe.ScriptExe(DbInsert.InsertTeacherTable(), connection);
                 exe.ScriptExe(DbInsert.InsertStudentTable(), connection);
@@ -210,6 +216,26 @@ namespace ITI.SchoolDatabase.Tests
                 connection.Close();
             }
         }
+
+        #region private methode
+        void ResetTables(SqlConnection connection)
+        {
+            ScriptExecutor exe = new ScriptExecutor();
+            int c = (int)new SqlCommand(@"use itiSchoolDB SELECT count(*) as IsExists FROM dbo.sysobjects where id = object_id('Classroom')", connection).ExecuteScalar();
+            if (c > 0) new SqlCommand("DROP TABLE Classroom", connection).ExecuteScalar();
+            int s = (int)new SqlCommand(@"use itiSchoolDB SELECT count(*) as IsExists FROM dbo.sysobjects where id = object_id('Student')", connection).ExecuteScalar();
+            if (s > 0) new SqlCommand("DROP TABLE Student", connection).ExecuteScalar();
+            int t = (int)new SqlCommand(@"use itiSchoolDB SELECT count(*) as IsExists FROM dbo.sysobjects where id = object_id('Teacher')", connection).ExecuteScalar();
+            if (t > 0) new SqlCommand("DROP TABLE Teacher", connection).ExecuteScalar();
+
+            exe.ScriptExe(DbInit.CreateTableTeacher(), connection);
+
+            exe.ScriptExe(DbInit.CreateTableStudent(), connection);
+
+            exe.ScriptExe(DbInit.CreateTableClassroom(), connection);
+
+        }
+        #endregion
     }
 }
 
